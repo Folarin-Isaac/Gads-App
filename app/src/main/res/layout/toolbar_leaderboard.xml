@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_scrollFlags="scroll|enterAlways"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="overdraw"
+    app:title="LEADERBOARD"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="110dp"
+        android:background="@drawable/submit_button"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="@string/submit"
+        android:textAllCaps="false"/>
+
+</androidx.appcompat.widget.Toolbar>
