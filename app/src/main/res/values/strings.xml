@@ -2,4 +2,9 @@
     <string name="app_name">GADS App</string>
     <string name="leader_board"> Leaderboad</string>
     <string name="submit"> Submit </string>
+    <string name="submission_alert"> Submission not Successful </string>
+    <string name="submission_note"> Submission Successful </string>
+    <string name="are_you_sure"> Are you sure? </string>
+    <string name="yes"> Yes</string>
+    <string name="project_submission"> Project Submission</string>
 </resources>

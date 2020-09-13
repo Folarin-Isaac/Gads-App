@@ -3,6 +3,7 @@ package com.example.gadsapp;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
@@ -10,7 +11,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -25,9 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         toolbar = findViewById(R.id.toolbar_leaderboard);
         setSupportActionBar(toolbar);
+
+
+
 
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabs);
@@ -50,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
+
 
 
 }

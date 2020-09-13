@@ -12,6 +12,7 @@ public class TablayoutAdapter extends FragmentPagerAdapter {
 
     // constructor
     public TablayoutAdapter(@NonNull FragmentManager fm) {
+
         super(fm);
     }
 
@@ -39,7 +40,7 @@ public class TablayoutAdapter extends FragmentPagerAdapter {
         if (position == 0){
             title = "Learning Leaders";
         }else {
-            title = "SkillIQ Leaders";
+            title = "Skill IQ Leaders";
         }
         return title;
     }
