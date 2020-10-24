@@ -46,7 +46,29 @@
             android:layout_marginTop="5dp"
             android:layout_marginStart="12dp"
             android:textSize="16sp"
-            android:text="300 Skill IQ Score, Egypt"/>
+            android:text="300"/>
+        
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/learning_hours"
+            android:layout_below="@id/learner_name"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="skill IQ Score,"/>
+
+        <TextView
+            android:id="@+id/learning_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/text"
+            android:layout_below="@id/learner_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:text="Egypt"/>
 
 
 

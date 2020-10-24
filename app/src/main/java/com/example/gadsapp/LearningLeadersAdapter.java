@@ -13,11 +13,11 @@ import java.util.List;
 
 public class LearningLeadersAdapter extends RecyclerView.Adapter<LearningLeadersAdapter.ViewHolder> {
     private final Context context;
-    private final List<LearningLeaders> learningLeaders;
+    private final List<LearningLeadersModelData> learningLeaderModelData;
 
-    public LearningLeadersAdapter(Context context, List<LearningLeaders>learningLeaders) {
+    public LearningLeadersAdapter(Context context, List<LearningLeadersModelData> learningLeaderModelData) {
         this.context = context;
-        this.learningLeaders = learningLeaders;
+        this.learningLeaderModelData = learningLeaderModelData;
     }
 
 
@@ -28,23 +28,26 @@ public class LearningLeadersAdapter extends RecyclerView.Adapter<LearningLeaders
         // view to inflate the layout with the recyclerview items
         View view = layoutInflater.inflate(R.layout.learning_leaders_itemview, parent, false);
         return new LearningLeadersAdapter.ViewHolder(view);
+
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.learning_name.setText(learningLeaders.get(position).getName());
-        holder.learning_hours.setText(learningLeaders.get(position).getHours());
-        holder.learning_country.setText(learningLeaders.get(position).getCountry());
+        holder.learning_name.setText(learningLeaderModelData.get(position).getName());
+        holder.learning_hours.setText(String.valueOf(learningLeaderModelData.get(position).getHours()));
+        holder.learning_country.setText(learningLeaderModelData.get(position).getCountry());
 
     }
 
     @Override
     public int getItemCount() {
-        return learningLeaders.size();
+
+        return learningLeaderModelData.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView learning_name, learning_hours, learning_country;
+      final TextView learning_name, learning_hours, learning_country;
 
 
         public ViewHolder(@NonNull View itemView) {
