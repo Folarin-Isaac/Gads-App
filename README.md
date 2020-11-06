@@ -3,7 +3,7 @@ Mobile Application that displays an updated list of names on the GADS LeaderBoar
 
 This application enables users submit project details directly from the app to a google form
 
-[gadsappscreenshots.zip](https://github.com/Folarin-Isaac/Gads-App/files/5503843/gadsappscreenshots.zip)
+[GADS APP Screenshots](https://github.com/Folarin-Isaac/Gads-App/files/5503843/gadsappscreenshots.png)
 
 
 
