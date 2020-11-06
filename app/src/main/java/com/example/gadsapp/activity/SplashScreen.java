@@ -1,4 +1,4 @@
-package com.example.gadsapp;
+package com.example.gadsapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.example.gadsapp.R;
 
 public class SplashScreen extends AppCompatActivity {
     private static int splashTimeOut = 5000;

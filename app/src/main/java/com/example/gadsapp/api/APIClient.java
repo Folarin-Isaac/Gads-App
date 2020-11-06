@@ -1,4 +1,4 @@
-package com.example.gadsapp;
+package com.example.gadsapp.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

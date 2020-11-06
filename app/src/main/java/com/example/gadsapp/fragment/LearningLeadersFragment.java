@@ -1,4 +1,4 @@
-package com.example.gadsapp;
+package com.example.gadsapp.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,9 +9,19 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gadsapp.R;
+import com.example.gadsapp.adapter.LearningLeadersAdapter;
+import com.example.gadsapp.api.APIClient;
+import com.example.gadsapp.api.APIInterface;
+import com.example.gadsapp.model.LearningLeadersModelData;
+
+
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -23,8 +33,8 @@ public class LearningLeadersFragment extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
     private ProgressBar progressBar;
     private APIInterface mAPIInterface;
-    private List<LearningLeadersModelData> learningLeaderModelData;
-    private LearningLeadersAdapter adapter;
+    private List<LearningLeadersModelData> learningLeadersModelData;
+    private LearningLeadersAdapter learningLeadersAdapter;
 
 
     View view;
@@ -38,25 +48,21 @@ public class LearningLeadersFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_learning_leaders, container, false);
-
         progressBar = view.findViewById(R.id.progressBar);
         recyclerView = view.findViewById(R.id.learning_leaders_recyclerView);
         progressBar.setVisibility(View.GONE);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-
         mAPIInterface = APIClient.getApiClient().create(APIInterface.class);
 
         Call<List<LearningLeadersModelData>> call = mAPIInterface.getLearningLeaders();
-
         call.enqueue(new Callback<List<LearningLeadersModelData>>() {
-
             @Override
             public void onResponse(Call<List<LearningLeadersModelData>> call, Response<List<LearningLeadersModelData>> response) {
-                learningLeaderModelData = response.body();
-                adapter = new LearningLeadersAdapter(getContext(), learningLeaderModelData);
-                recyclerView.setAdapter(adapter);
+                learningLeadersModelData = response.body();
+                learningLeadersAdapter = new LearningLeadersAdapter(learningLeadersModelData, getContext());
+                recyclerView.setAdapter(learningLeadersAdapter);
             }
 
             @Override
@@ -64,8 +70,11 @@ public class LearningLeadersFragment extends Fragment {
 
             }
         });
+
         return view;
 
     }
 
+
 }
+

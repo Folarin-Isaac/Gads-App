@@ -12,7 +12,7 @@
     android:background="@color/black">
 
     <Button
-        android:id="@+id/submit_button"
+        android:id="@+id/button"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:layout_marginStart="110dp"

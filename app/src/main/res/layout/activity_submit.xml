@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@color/black"
     android:layout_height="match_parent"
-    tools:context=".SubmitActivity">
+    tools:context=".activity.SubmitActivity">
 
     <include
         android:id="@+id/submit_toolBar"
@@ -51,6 +51,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/edit_firstName"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:hint="@string/first_name"
@@ -62,6 +63,7 @@
             android:textStyle="bold"/>
 
         <EditText
+            android:id="@+id/edit_lastName"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
@@ -76,7 +78,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/email_address"
+        android:id="@+id/edit_email_address"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,12 +95,12 @@
         android:padding="12dp"/>
 
     <EditText
-        android:id="@+id/edit_github"
+        android:id="@+id/edit_projectLink"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email_address"
+        app:layout_constraintTop_toBottomOf="@id/edit_email_address"
         android:layout_marginTop="50dp"
         android:background="@drawable/edit_background"
         android:hint="@string/github"
@@ -114,7 +116,7 @@
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_github"
+        app:layout_constraintTop_toBottomOf="@id/edit_projectLink"
         android:layout_marginTop="70dp"
         android:background="@drawable/confirm_button"
         android:text="@string/submit"

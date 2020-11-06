@@ -1,16 +1,17 @@
-package com.example.gadsapp;
+package com.example.gadsapp.model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LearningLeadersModelData {
     @SerializedName("name")
-    private String name;
+    public String name;
 
     @SerializedName("hours")
-    private int hours;
+    public int hours;
 
     @SerializedName("country")
-    private String country;
+    public String country;
 
 
     public String getName() {
@@ -23,17 +24,5 @@ public class LearningLeadersModelData {
 
     public String getCountry() {
         return country;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setHours(int hours) {
-        this.hours = hours;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 }
